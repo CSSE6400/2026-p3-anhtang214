@@ -5,7 +5,8 @@ from flask_sqlalchemy import SQLAlchemy
 def create_app(config_overrides=None): 
    app = Flask(__name__) 
  
-   app.config['SQLALCHEMY_DATABASE_URI'] = environ.get("SQLALCHEMY_DATABASE_URI", "sqlite:///db.sqlite")
+   app.config['SQLALCHEMY_DATABASE_URI'] = environ.get("SQLALCHEMY_DATABASE_URI",
+                                                       "sqlite:///db.sqlite")
    if config_overrides: 
        app.config.update(config_overrides)
  
